@@ -1,0 +1,53 @@
+.about{
+    background-color: #8f8e8e1e;
+  }
+.aboutcontain{
+    display: flex;
+    flex-direction: column;
+   padding: 7% 0% 3%;
+}
+.abouthome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 5%;
+    text-align: justify;
+}
+.iconabout{
+  font-size: 2rem;
+  margin-bottom: 5%;
+  color: #0000005b;
+}
+.abouthome p{
+    font-size: 1.3rem;
+    padding: 1% 5%;
+}
+.titlehome{
+    color: #12003D;
+    font-weight: 500;
+}
+@media only screen and (min-width: 1024px) {
+    .about{
+        background-color: #8f8e8e1e;
+    }
+    .titleabout{
+       font-size: 2rem;
+       padding-top: 5%;
+       padding-bottom: 2%;
+    }
+    .aboutcontain{
+       flex-direction: row;
+    }
+    .abouthome{
+       padding: 0% 5%;
+   }
+    .iconabout{
+      font-size: 2.4rem;
+      margin-bottom: 5%;
+    }
+    .abouthome p{
+        font-size: 1.3rem;
+        padding:3% 5%;
+        line-height: 30px;
+    }
+    }

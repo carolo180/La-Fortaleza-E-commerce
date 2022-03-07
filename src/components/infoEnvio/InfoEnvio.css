@@ -1,0 +1,46 @@
+.envio{
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    height: 11vh;
+    align-items: center;
+}
+.enviotitle{
+    color: #11E7B3;
+    font-size: 1.2rem;
+    border-right: 4px solid #ffffff;
+    width: 40%;
+    text-align: right;
+    line-height: 30px;
+    margin-top: 10px;
+    padding-right:15px;
+  }
+
+.envioparrafo{
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: left;
+    width: 55%;
+     margin-bottom: 0%;
+     margin-block-start:0%;
+    margin-block-end: 0%;
+  }
+  .iconenvio{
+    font-size: 1rem;
+}
+
+ @media only screen and (min-width: 750px) {
+    .enviotitle{
+        font-size: 1.8rem;
+    }
+    
+    .envioparrafo{
+        font-size: 1.6rem;
+       
+       }
+    .iconenvio{
+        font-size: 5rem;
+        padding-left: 2rem;
+    }
+  
+     }

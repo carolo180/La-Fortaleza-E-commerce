@@ -1,0 +1,57 @@
+.footer{
+    background-color: black;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titlefoot{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #11E7B3;
+}
+.slogan{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    margin-block-start: 0%;
+    font-weight: 400;
+    padding-bottom: 1%;
+    margin-bottom: 0%;
+    color: aliceblue;
+    text-align: center;
+}
+.middlefoot{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 2%;
+}
+.logos{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.iconlogos{
+    font-size: 20px;
+    color: aliceblue;
+ }
+.mywork{
+    color: aliceblue;
+    font-size: 0.8rem;
+    padding: 0 2%;
+    margin-bottom: 0%;
+}
+@media only screen and (min-width: 620px) {
+    .footer{
+        height: 20vh;
+        }
+}
+@media only screen and (min-width: 1024px) {
+    .footer{
+      height: 25vh;
+     }
+    .iconlogos{
+      font-size: 25px;
+    }
+}

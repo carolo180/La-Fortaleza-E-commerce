@@ -1,0 +1,42 @@
+.Nav{
+    background-color:#a68ec531;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-between;
+}
+.Nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+    font-weight: bold;
+    color: #12003D;
+}
+.icons{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+.borderIcon{
+    background-color: #97D711;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navIcon{
+  font-size: 1.5rem;
+}
+.borderIcon:hover{
+    background-color: #12003D;
+    width: 40px;
+    height: 40px;
+ }
+ .borderIcon:hover .navIcon{
+    color: #ffffff;
+ }

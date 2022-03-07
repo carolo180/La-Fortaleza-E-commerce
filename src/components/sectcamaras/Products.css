@@ -1,0 +1,255 @@
+.tiendabody{
+    margin-top: -30px;
+}
+.filterCamps{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.buscador{
+  width: 80%;
+  height: 5vh;
+  border: 2px solid #11e7b275;
+  color: rgb(52, 0, 121);
+  background-color: #c7c7c92f;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 5px;
+}
+.buscador::placeholder {
+  color: rgb(52, 0, 121);
+  font-size: 1rem;
+}
+.categories{
+  width: 80%;
+  height:5vh;
+  border-radius: 5px;
+  border: 2px solid #11e7b275;
+  color: rgb(52, 0, 121);
+  background-color: #c7c7c92f;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#sectcamara{
+    padding-top: 5%;
+    position: relative;
+  }
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  margin-top: 20%;
+  padding: 0%;
+}
+picture{
+  width: 120px;
+}
+.freesend{
+  color:#97D711;
+  font-weight: bold;
+  margin-bottom: 0%;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.card-body{
+  flex: 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   height: 100px;
+}
+.card-title{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+#icard{
+    width: 100%;
+    padding-top: 10px;
+ }
+#botonprod{
+    background-color: #0a001be7;
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+
+/*MODAL*/
+
+#imoda{
+  width: 30vh;
+  height: 30vh;
+}
+.pic{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.modal-dialog{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-title{
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #0a001be7;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.parradescrip{
+  text-align: justify;
+}
+.botdescrip{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addtocar{
+  background-color:#97D711;
+  height: 6vh;
+  width: 20vh;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+#descri{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titleprod{
+  font-size: 2rem;
+  color: #0a001be7;
+}
+
+.guaranteIcon{
+  color: #97D711;
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+.iconsmodal{
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  height: 10vh;
+  padding-top: 1rem;
+}
+.iconmodpar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(186, 190, 194, 0.253);
+  height: 8vh;
+  width: 30%;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+ }
+.iconmod{
+  font-size: 1.6rem;
+  color: black;
+}
+
+
+
+/*MODAL*/
+@media (min-width: 765px){
+  #sectcamara{
+    margin-top: 200px;
+  }
+  .filterCamps{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .buscador{
+    width: 30%;
+    height: 4vh;
+    border: 2px solid #11e7b275;
+  }
+  .categories{
+    width: 30%;
+    height:4vh;
+  }
+  #imoda{
+    width: 30vh;
+    height: 30vh;
+  }
+  .parradescrip{
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    width: 90%;
+  }
+  .iconsmodal{
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px){
+  .filterCamps{
+     width: 90%;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .buscador{
+    width: 20%;
+    height: 5vh;
+
+  }
+  .categories{
+    width: 20%;
+    height:5vh;
+  }
+  #imoda{
+    width: 50vh;
+    height: 50vh;
+  }
+  .modal-dialog{
+    max-width: 80vw;
+    min-height: 90vh;
+  }
+  .modal-content{
+    min-height: 90vh;
+  }
+  .modal-body{
+    flex-direction: row;
+  }
+  .parradescrip{
+    font-size: 1.2rem;
+    padding: 3%;
+  }
+  #descri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 90%;
+  }
+  .addtocar{
+    background-color:#97D711;
+    height: 6vh;
+    width: 20vh;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  .iconsmodal{
+    width: 90%;
+  }
+}
+
+

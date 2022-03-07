@@ -1,0 +1,167 @@
+.carru{
+    margin-top: 53px;
+    position: relative;
+    z-index: -1;
+ }
+
+.img_car{
+    position: relative;
+    z-index: 0;
+}
+.titlecar{
+    position: absolute;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    margin-top: 3%;
+    right: 10%;
+    font-size: 1rem;
+}
+.parracar{
+    position: absolute;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    margin-top: 9%;
+    right: 15%;
+    font-size: 0.7rem;
+}
+.butcar{
+    position: absolute;
+    z-index: 1;
+    color: #f6f4f8;
+    background-color: #100627;
+    margin-top: 19%;
+    right: 30%;
+    font-size: 0.4rem;
+    width: 50px;
+    height: 15px;
+    border-radius: 10px;
+
+}
+.titlecar2{
+    position: absolute;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    margin-top: 3%;
+    left: 5%;
+    font-size: 1.3rem;
+}
+.parracar2{
+    position: absolute;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    margin-top: 9%;
+    left: 5%;
+    font-size: 0.9rem;
+}
+.butcar2{
+    position: absolute;
+    z-index: 1;
+    color: #f6f4f8;
+    background-color: #100627;
+    margin-top: 22%;
+    left: 15%;
+    font-size: 0.4rem;
+    width: 50px;
+    height: 15px;
+    border-radius: 10px;
+
+}
+
+@media only screen and (min-width: 630px) {
+    .carru{
+        z-index: 0;
+        position: relative;
+        margin-top: 150px;
+     }
+     
+    .titlecar{
+        margin-top: 4%;
+        right: 5%;
+        font-size: 2.2rem;
+    }
+    .parracar{
+        position: absolute;
+        z-index: 1;
+        color: rgb(255, 255, 255);
+        margin-top: 10%;
+        right: 7%;
+        font-size: 1.5rem;
+    }
+    .butcar{
+        margin-top: 22%;
+        right: 30%;
+        font-size: 1rem;
+        width: 120px;
+        height: 30px;
+     }
+    .titlecar2{
+        left: 7%;
+        margin-top: 5%;
+        font-size: 1.7rem;
+    }
+    .parracar2{
+        left: 7%;
+        margin-top: 10%;
+        font-size: 1.5rem;
+    }
+    .butcar2{
+        left: 10%;
+        margin-top: 20%;
+        font-size: 1rem;
+        width: 120px;
+        height: 26px;
+    }
+    
+   
+    }
+ @media only screen and (min-width: 1024px) {
+    .titlecar{
+        margin-top: 4%;
+        right: 3%;
+        font-size: 3rem;
+    }
+    .parracar{
+        position: absolute;
+        z-index: 1;
+        color: rgb(255, 255, 255);
+        margin-top: 10%;
+        right: 5%;
+        font-size: 2.2rem;
+    }
+    .butcar{
+        margin-top: 22%;
+        right: 30%;
+        font-size: 1.4rem;
+        width: 150px;
+        height: 50px;
+    }
+    .titlecar2{
+       font-size: 2.2rem;
+    }
+    .parracar2{
+        font-size: 1.8rem;
+    }
+    .butcar2{
+        font-size: 1rem;
+        width: 120px;
+        height: 40px;
+        left: 15%;
+    }
+     }
+    @media only screen and (min-width: 1224px) {
+        .titlecar{
+           right: 6%;
+        }
+        .parracar{
+            margin-top: 10%;
+            right: 9%;
+            font-size: 2.2rem;
+        }
+        .butcar{
+            margin-top: 21%;
+            right: 25%;
+            font-size: 1.1rem;
+            width: 130px;
+            height: 42px;
+        }
+        }

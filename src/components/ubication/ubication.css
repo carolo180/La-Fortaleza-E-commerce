@@ -1,0 +1,41 @@
+.ubication{
+    display: flex;
+    flex-direction: column;
+    background-color: #8f8e8e1e;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+.titleubica{
+    text-align: center;
+    padding: 0px 0px 18px;
+    color:#12003D;
+}
+.direcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#12003D;
+}
+.pardire{
+    text-align: center;
+}
+iframe{
+    border-radius: 100%;
+    height: 12rem;
+    width: 14rem;
+    border: 5px solid #ffffff;
+ }
+@media only screen and (min-width: 620px) {
+    .ubication{
+        flex-direction: row;
+        width: 100%;
+        height: 60vh;
+    }
+    iframe{
+        border-radius: 100%;
+        height: 16rem;
+        width: 17rem;
+        border: 5px solid #ffffff;
+    }
+}
