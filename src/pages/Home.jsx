@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from "../components/header/Header";
 import Carousel from '../components/carrusel/Carousel';
 import InfoEnvio from '../components/infoEnvio/InfoEnvio';
 import AboutUs from '../components/about_us/AboutUs';
@@ -10,7 +9,7 @@ import '../index.css';
 const Home = () => {
   return (
     <>
-        <Header />
+      
         <div className='body'>
           <Carousel />
           <InfoEnvio />

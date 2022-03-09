@@ -1,8 +1,8 @@
 .envio{
-    background-color: #000;
+    background-color: #080014;
     display: flex;
     justify-content: space-around;
-    height: 11vh;
+    height: 12vh;
     align-items: center;
 }
 .enviotitle{

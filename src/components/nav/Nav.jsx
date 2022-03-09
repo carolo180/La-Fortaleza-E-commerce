@@ -4,21 +4,23 @@ import { Link as LinkRoute } from "react-router-dom";
 import styled from "styled-components";
 import { FaCartPlus } from "react-icons/fa";
 import {FaRegUserCircle} from "react-icons/fa"
-import {useState} from "react";
+
 
 
 const Nav = ({ open }) => {
+ 
+  
  const NavWrapper = styled.nav`
   display: flex;
   flex-direction: column;
    align-items: center;
-  background-color:#8f8e8e;
+  background-color:#0a001b;
   position: fixed;
   top: 120px;
   right: ${props => (props.open ? "0" : "-100%")};
    width: 100%;
-  height: 90vh;
-  transition: right 0.3s linear;
+  height: 50vh;
+  transition: right 1s linear;
   padding-top:5vh;
   font-family: 'Poppins', sans-serif;
 
@@ -30,6 +32,12 @@ const Nav = ({ open }) => {
     height:20vh;
     align-items: center;
     font-weight:bold;
+    color:white;
+    padding-left:0%;
+  }
+  a{
+    color:white;
+    text-decoration:none;
   }
   .icons{
     width: 30%;
@@ -60,7 +68,6 @@ const Nav = ({ open }) => {
       color: #12003D;
       flex-direction:row;
       font-size:1rem;
-  
     }
     .itemmenu{
       font-size:1.1rem;
@@ -74,6 +81,17 @@ const Nav = ({ open }) => {
       margin-right: 1.5rem;
       margin-top:0%;
        }
+       a{
+        color:#0a001b;
+        text-decoration:none;
+      }
+    
+      .itemmenu:hover{
+        cursor:pointer;
+        color: #11E7B3;
+        transition-property:initial;   
+        transition-duration: 0.5s;
+      }
   }
 
 
@@ -90,20 +108,27 @@ const Nav = ({ open }) => {
   font-size: 1.5rem;
 }
 .borderIcon:hover{
-    background-color: #12003D;
+    background-color: #11E7B3;;
     width: 40px;
     height: 40px;
+    transition-property:initial;   
+    transition-duration: 0.5s;
  }
  .borderIcon:hover .navIcon{
     color: #ffffff;
  }
-`;
+`
+  const handleClickItem = ()  =>{
+    <NavWrapper open={!open} />
+   
+  }
+;
   return (
     <NavWrapper open={open}>
         <ul>
         <LinkRoute to={"/"}><span className='itemmenu'>Home</span></LinkRoute>
-          <Link to={`container-carousel`} smooth={true} offset={-70} duration={600}><span className='itemmenu'>Products</span></Link>
-          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Contact</span></Link>
+          <Link to={`container-carousel`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Products</span></Link>
+          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu' onClick={e => { e.preventDefault(); handleClickItem(); }}>Contact</span></Link>
         </ul>
         <div className='icons'>
             <div className='borderIcon'>

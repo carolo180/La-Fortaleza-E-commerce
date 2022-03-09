@@ -2,10 +2,7 @@ import React from 'react'
 import "./Products.css"
 import { FaCartPlus } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
-import { FaWifi  } from "react-icons/fa";
-import { AiFillEye } from "react-icons/ai";
-import { BiMemoryCard} from "react-icons/bi";
-import { BsBadgeHdFill} from "react-icons/bs";
+
 
 
 
@@ -34,15 +31,12 @@ const ModalProduct= (props) => {
                       <h3>{props.precio}</h3>
                       <button className='addtocar'>Add To Car <FaCartPlus  className='navIcon' /></button>
                     </div>
-                    <div className='iconsmodal'>
-                      <p className='iconmodpar'><FaWifi className='iconmod'/>2.4G WIFI</p>
-                      <p className='iconmodpar'><AiFillEye  className='iconmod'/>Night Vision</p>
-                      <p className='iconmodpar'><BiMemoryCard  className='iconmod'/>128G</p>
-                      <p className='iconmodpar'><BsBadgeHdFill  className='iconmod'/>960px</p>
-                    </div>
+                
               </div>
+              
             
           </div>
+       
         
         </div>
       </div>
