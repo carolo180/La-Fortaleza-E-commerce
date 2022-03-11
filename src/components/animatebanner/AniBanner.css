@@ -6,6 +6,8 @@
     align-items: center;   
     margin-top: 22%;
     overflow: hidden;
+    margin-top: 12.5rem;
+    position: absolute;
 }
 .animation{
     animation-delay: 1s;
@@ -37,9 +39,7 @@
         height: 60px;
         display: flex;
         align-items: center;   
-        position: fixed; 
-        z-index: 999;
-        margin-top: 0%;
+       
     }
     .animation{
         animation-delay: 1s;

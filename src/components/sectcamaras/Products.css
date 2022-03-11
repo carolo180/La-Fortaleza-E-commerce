@@ -1,22 +1,32 @@
 .tiendabody{
     margin-top: -30px;
 }
+ #sectcamara{
+    margin-top:300px;
+    position: absolute;
+  }
+  .buttonFilters{
+     display: flex;
+     justify-content: center;
+  }
+  .btn-outline-dark{
+    margin-left: 5px;
+    border: 2px solid rgb(52, 0, 121);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
 .filterCamps{
-  width: 100%;
-  height: 15vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
 }
 .buscador{
-  width: 80%;
-  height: 5vh;
-  border: 2px solid #11e7b275;
+  width: 60%;
+  height: 4vh;
+  border: 2px solid #10062756;
   color: rgb(52, 0, 121);
   background-color: #c7c7c92f;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 5px;
+  margin-bottom: 3%;
 }
 .buscador::placeholder {
   color: rgb(52, 0, 121);
@@ -26,15 +36,12 @@
   width: 80%;
   height:5vh;
   border-radius: 5px;
-  border: 2px solid #11e7b275;
+  border: 2px solid #10062756;
   color: rgb(52, 0, 121);
   background-color: #c7c7c92f;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-#sectcamara{
-    padding-top: 5%;
-    position: relative;
-  }
+
 .card{
   display: flex;
   flex-direction: column;
@@ -55,12 +62,12 @@ picture{
   text-align: left;
 }
 .card-body{
-  flex: 0 0 0;
+ padding: 0%; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   height: 100px;
+   height: 70px;
 }
 .card-title{
   margin-bottom: 0%;
@@ -70,15 +77,46 @@ picture{
     width: 100%;
     padding-top: 10px;
  }
+ 
 #botonprod{
     background-color: #0a001be7;
-    height: 25px;
+    height: 30px;
     width: 100px;
     border-radius: 5px;
     color: aliceblue;
     font-size: 1rem;
+    margin-bottom: 5px;
 }
-
+#botonprod:hover{
+  background-color: #97D711;
+  color: #0a001be7;
+  font-weight: bold;
+  transition-property:initial;   
+  transition-duration: 0.8s;
+}
+.secondboton{
+  background-color: #ffffff;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  color: #97D711;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  border: 2px solid #97D711;
+  font-weight: bold;
+}
+.secondboton:hover{
+  background-color: #97D711;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property:initial;   
+  transition-duration: 0.8s;
+}
+.botones{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
 
 /*MODAL*/
 
@@ -126,6 +164,11 @@ picture{
   font-size: 1.2rem;
   border-radius: 5px;
 }
+.addtocar:hover{
+  background-color: #0a001be7;
+  border: 2px solid #97D711;
+  color: #ffffff;
+}
 #descri{
   display: flex;
   flex-direction: column;
@@ -144,7 +187,7 @@ picture{
 }
 .iconsmodal{
   display: flex;
-  width: 90vw;
+  width: 100%;
   justify-content: space-between;
   height: 10vh;
   padding-top: 1rem;
@@ -152,18 +195,23 @@ picture{
 .iconmodpar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
-  background-color: rgba(186, 190, 194, 0.253);
-  height: 8vh;
-  width: 30%;
+  height: 5vh;
+  width: 16%;
   font-size: 0.8rem;
   text-align: center;
   font-weight: 600;
+  color: rgb(6, 1, 19);
  }
 .iconmod{
-  font-size: 1.6rem;
-  color: black;
+  font-size: 1.5rem;
+  color: rgb(6, 1, 19);
+  background-color: #83838363;
+  border-radius: 100%;
+  height: 40px;
+  width: 30%;
+  padding: 5%;
 }
 
 
@@ -171,16 +219,15 @@ picture{
 /*MODAL*/
 @media (min-width: 765px){
   #sectcamara{
-    margin-top: 200px;
+    margin-top:300px;
   }
   .filterCamps{
-    flex-direction: row;
-    justify-content: space-between;
+    margin-bottom: 0%;  
+    justify-content: flex-end;
   }
   .buscador{
-    width: 30%;
-    height: 4vh;
-    border: 2px solid #11e7b275;
+    width: 25%;
+    height: 3vh;
   }
   .categories{
     width: 30%;
@@ -196,18 +243,14 @@ picture{
     width: 90%;
   }
   .iconsmodal{
-    width: 70%;
+    width: 100%;
   }
 }
 
 @media (min-width: 1024px){
-  .filterCamps{
-     width: 90%;
-    justify-content: space-between;
-    margin: auto;
-  }
+ 
   .buscador{
-    width: 20%;
+    width: 18%;
     height: 5vh;
 
   }
@@ -241,14 +284,28 @@ picture{
     width: 90%;
   }
   .addtocar{
-    background-color:#97D711;
-    height: 6vh;
-    width: 20vh;
+     height: 6vh;
+    width: 23vh;
     font-size: 1.2rem;
-    border-radius: 5px;
-  }
+ }
   .iconsmodal{
-    width: 90%;
+    width: 100%;
+    height: 13vh;
+    padding-top: 1rem;
+    justify-content: space-around;
+  }
+  .iconmodpar{
+    height: 8vh;
+    width: 9%;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(6, 1, 19);
+    justify-content: space-around;
+   }
+  .iconmod{
+    font-size: 1.6rem;
+    color: rgb(6, 1, 19);
   }
 }
 

@@ -2,6 +2,8 @@ import React from 'react'
 import "./Carousel.css"
 import car1 from "../../assets/img/carone.png"
 import garden from "../../assets/img/home.png"
+import {Link} from 'react-scroll';
+
 
 const Carousel = () => {
   return (
@@ -15,13 +17,19 @@ const Carousel = () => {
             <div class="carousel-item active">
                 <h1 className='titlecar'>Business Security Systems</h1>  
                 <p className='parracar'>Monitoring, intrusion and access<br /> systems for companies.</p>  
-                <button className='butcar'>Watch More</button> 
+                <Link to={`about`}>
+                  <button className='butcar'>Watch More</button> 
+                </Link>
+                
                 <img src={car1} class="img_car d-block w-100" alt="..." />
             </div>
             <div class="carousel-item">
                 <h1 className='titlecar2'>Protect Your Home</h1>  
-                <p className='parracar2'>Monitoring from your cell phone,<br></br> anywhere, anytime.</p>  
-                <button className='butcar2'>Watch More</button> 
+                <p className='parracar2'>Monitoring from your cell phone anywhere, anytime.</p>  
+                <Link to={`about`}>
+                <button className='butcar2'>Watch More</button>
+                </Link>
+                
                 <img src={garden} class="img_car d-block w-100" alt="..." />
             </div>
            

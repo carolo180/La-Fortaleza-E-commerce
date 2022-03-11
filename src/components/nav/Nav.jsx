@@ -4,21 +4,38 @@ import { Link as LinkRoute } from "react-router-dom";
 import styled from "styled-components";
 import { FaCartPlus } from "react-icons/fa";
 import {FaRegUserCircle} from "react-icons/fa"
-import {useState} from "react";
+import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
+import { useState, useEffect } from 'react';
 
 
-const Nav = ({ open }) => {
+const Nav = ({ open, cart }) => {
+
+ 
+const [cartCount, setCartCount] = useState(0)
+
+useEffect(()=>{
+
+   let count = 0;
+   cart.forEach((item) => {
+     count += item.qty;
+   });
+
+   setCartCount(count);
+},[cart, cartCount])
+  
+
  const NavWrapper = styled.nav`
   display: flex;
   flex-direction: column;
    align-items: center;
-  background-color:#8f8e8e;
+  background-color:#0a001b;
   position: fixed;
   top: 120px;
   right: ${props => (props.open ? "0" : "-100%")};
    width: 100%;
-  height: 90vh;
-  transition: right 0.3s linear;
+  height: 50vh;
+  transition: right 1s linear;
   padding-top:5vh;
   font-family: 'Poppins', sans-serif;
 
@@ -30,15 +47,14 @@ const Nav = ({ open }) => {
     height:20vh;
     align-items: center;
     font-weight:bold;
+    color:white;
+    padding-left:0%;
   }
-  .icons{
-    width: 30%;
-    height:10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   }
-
+  a{
+    color:white;
+    text-decoration:none;
+  }
+ 
   @media only screen and (min-width: 624px) {
     display:flex;
     position: initial;
@@ -52,71 +68,103 @@ const Nav = ({ open }) => {
 
     ul{
       display: flex;
-      justify-content: space-around;
-      width: 40%;
+      justify-content: space-between;
+      width: 100%;
       height: 3.2rem;
       align-items: center;
       font-weight: bold;
       color: #12003D;
       flex-direction:row;
       font-size:1rem;
-  
-    }
+      }
+    .itemsmenu{
+      width:50%;
+      display:flex;
+      justify-content: space-around;
+      }
     .itemmenu{
       font-size:1.1rem;
       text-decoration:none;
     }
-    .icons{
-      width: 10%;
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      margin-right: 1.5rem;
-      margin-top:0%;
+   
+       a{
+        color:#0a001b;
+        text-decoration:none;
+      }
+    
+      .itemmenu:hover{
+        cursor:pointer;
+        color: #11E7B3;
+        transition-property:initial;   
+        transition-duration: 0.5s;
+      }
+     
+    
        }
-  }
 
 
 .borderIcon{
     background-color: #97D711;
     border-radius: 100px;
-    width: 40px;
+    width: 12vw;
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    
+ 
 }
+
 .navIcon{
   font-size: 1.5rem;
 }
 .borderIcon:hover{
-    background-color: #12003D;
-    width: 40px;
-    height: 40px;
+    background-color: #11E7B3;
+    width: 14vw;
+  
+    transition-property:initial;   
+    transition-duration: 0.5s;
  }
  .borderIcon:hover .navIcon{
     color: #ffffff;
  }
-`;
+`
+  const handleClickItem = ()  =>{
+    <NavWrapper open={!open} />
+   
+  }
+  
+;
   return (
     <NavWrapper open={open}>
         <ul>
+          <li className='itemsmenu'>
         <LinkRoute to={"/"}><span className='itemmenu'>Home</span></LinkRoute>
-          <Link to={`container-carousel`} smooth={true} offset={-70} duration={600}><span className='itemmenu'>Products</span></Link>
-          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Contact</span></Link>
+          <Link to={`container-carousel`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Products</span></Link>
+          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu' onClick={e => { e.preventDefault(); handleClickItem(); }}>Contact</span></Link>
+          </li>
+          <li>
+          <LinkRoute to={"/carrito"}>
+            <div className='borderIcon'>
+             
+              {cartCount} Products
+              <FaCartPlus  className='navIcon' />
+              
+           </div>
+           </LinkRoute> 
+           </li>
         </ul>
-        <div className='icons'>
-            <div className='borderIcon'>
-             <FaRegUserCircle  className='navIcon'/>
-            </div>
-            <div className='borderIcon'>
-             <FaCartPlus  className='navIcon' />
-            </div>
-          
-        </div>
+       
+       
+      
 
     </NavWrapper>
   )
 }
+const mapStateToProps = (state) =>{
+  return{
+    cart:state.shop.cart
+  }
+}
 
-export default Nav
+export default connect (mapStateToProps)(Nav) 
