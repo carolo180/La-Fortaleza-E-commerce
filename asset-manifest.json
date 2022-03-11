@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/La-fortaleza-E-commerce/static/css/main.f626b800.css",
+    "main.js": "/La-fortaleza-E-commerce/static/js/main.b5b91999.js",
+    "static/media/carone.png": "/La-fortaleza-E-commerce/static/media/carone.af255c6432573c54bb20.png",
+    "static/media/CormorantGaramond-LightItalic.ttf": "/La-fortaleza-E-commerce/static/media/CormorantGaramond-LightItalic.e6341a06fa18687533a6.ttf",
+    "static/media/home.png": "/La-fortaleza-E-commerce/static/media/home.4c49c816685b69e1e1b2.png",
+    "static/media/logo.png": "/La-fortaleza-E-commerce/static/media/logo.f7a96d3c8967491f4fa1.png",
+    "index.html": "/La-fortaleza-E-commerce/index.html",
+    "main.f626b800.css.map": "/La-fortaleza-E-commerce/static/css/main.f626b800.css.map",
+    "main.b5b91999.js.map": "/La-fortaleza-E-commerce/static/js/main.b5b91999.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f626b800.css",
+    "static/js/main.b5b91999.js"
+  ]
+}
