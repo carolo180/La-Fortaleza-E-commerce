@@ -1,11 +1,14 @@
 import './App.css';
 import React from "react";
-import {Route, Routes, useLocation } from "react-router-dom";
+import {Route, Routes, useLocation, Redirect } from "react-router-dom";
 import ScrollToTop from "./components/Scroll/ScrollToTop"
 import Home from './pages/Home';
 import Tienda from './pages/Tienda';
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
+import Cart from './pages/Carrito';
+import ModalProduct from './components/sectcamaras/ModalProduct';
+import { connect } from "react-redux";
 
 
 function App() {
@@ -21,9 +24,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/tienda" element={<Tienda/>} />
+            <Route path="/carrito" element={<Cart/>} />
+            <Route exact path="/product/:id" component={ModalProduct} />
+          
           </Routes>
 
-          <Footer />
+
           
         </ScrollToTop>
    
@@ -31,5 +37,11 @@ function App() {
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
 
-export default App;
+export default connect(mapStateToProps)(App)
+

@@ -1,0 +1,145 @@
+.cart{
+    display: flex;
+    margin-top: 70vh;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+.everycart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 100vh;
+}
+.allcart img{
+   width: 25vh;
+   height: 25vh;
+}
+.allcart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(155, 155, 156, 0.103);
+     border-radius: 20px;
+    margin-bottom: 5vh;
+    width: 70%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.allcart p{
+   font-size: 1.2rem;
+   color:#382350;
+ }
+
+ .alltotal{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     background-color: #382350;
+     color: aliceblue;
+     height: 50vh;
+     padding: 20px;
+ }
+ .infocart{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+  }
+ #qty{
+     width: 50px;
+     border: 3px solid #11E7B3;
+     }
+ .sendboton{
+     background-color: #97D711;
+     height: 5vh;
+     width: 70%;
+     font-weight: bold;
+     margin-top: 2%;
+ }
+ .sendboton:hover{
+     background-color: aliceblue;
+     color: #97D711;
+     transition-property:initial;   
+     transition-duration: 0.8s;
+   
+}
+ .totalitems{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .qtyinput{
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .endspace{
+     width: 30%;
+ }
+
+ @media only screen and (min-width: 768px) {
+    .cart{
+        margin-top: 50vh;
+     }
+     .allcart p{
+        font-size: 2rem;
+      }
+      .alltotal{
+      font-size: 2rem;
+    }
+    .everycart{
+        margin-top: 170vh;
+    }
+     }
+     @media only screen and (min-width: 1024px) {
+        .cart{
+            display: flex;
+            margin-top: 15rem;
+            flex-direction: row;
+          }
+        .everycart{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            align-items: flex-end;
+            margin-top: 14rem;
+         }
+        .allcart img{
+           width: 35vh;
+           height: 35vh;
+        }
+        .allcart{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 80%;
+        }
+        .alltotal{
+             width: 30%;
+             margin-top: -14rem;
+            height: 100vh;
+            font-size: 1.3rem;
+            padding-top: 8rem;
+        }
+        .allcart p{
+            font-size: 1.2rem;
+            font-weight: bold;
+            }
+        .sendboton{
+            background-color: #97D711;
+            height: 7vh;
+            width: 60%;
+            font-weight: bold;
+            margin-top: 2%;
+        }
+        #qty{
+            width: 40px;
+           }
+         }

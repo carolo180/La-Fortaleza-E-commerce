@@ -21,7 +21,7 @@ const Header = ({location}) => {
 
   return (
   
-    <div className='header' style={location==="/tienda" ? {"position":"absolute","marginTop":"2rem"} : {"position":"fixed"}}>
+    <div className='header' style={location==="/tienda" || location==="/carrito"  ? {"position":"absolute","marginTop":"2rem"} : {"position":"fixed"}}>
     
       <img src={logo} width="5%" alt='logo'/>
         <h1>LA FORTALEZA</h1>
