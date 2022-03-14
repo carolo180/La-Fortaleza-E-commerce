@@ -43,7 +43,7 @@ const Form = ({cart, Price}) => {
      "Hi i am " + named + ","+ "%0a"
      + " My email is " + mails + ","+" %0a"
      + " My contact number is " + phones + ","+"%0a"
-     + "I would like to order the next products:"+ mapeo+  "%0a"  + "With a total purchase of: " + totalPrices.toFixed(3) +"."+ "%0a" 
+     + "I would like to order the next products:"+ mapeo+  "%0a"  + "With a total purchase of $: " + totalPrices.toFixed(3) +"."+ "%0a" 
      + message + "."
      
      window.open(url, '_blank').focus();
@@ -76,7 +76,7 @@ const Form = ({cart, Price}) => {
        <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="carroinfo">Your cart products</span>
-          <span class="badge bg-primary rounded-pill">{cartCount}</span>
+          <span class="badge rounded-pill">{cartCount}</span>
         </h4>
         <ul class="list-group mb-3">
 

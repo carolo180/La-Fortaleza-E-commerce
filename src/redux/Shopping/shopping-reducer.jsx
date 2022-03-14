@@ -207,28 +207,33 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-            // Great Item data from products array
+            // Encuentra el producto a agregar por su id
             const item = state.products.find(
               (product) => product.id === action.payload.id
             );
-            // Check if Item is in cart already
+            // identifica si el producto ya esta en el carrito
             const inCart = state.cart.find((item) =>
               item.id === action.payload.id ? true : false
             );
 
             return {
+                // agrega los datos que ya estan, para no sobreescribir o perder data
               ...state,
+                // si el item esta en el cart realiza el mapeo busca el id y lo incrementa
+                //si no envia el item
               cart: inCart
                 ? state.cart.map((item) =>
-                    item.id === action.payload.id
-                      ? { ...item, qty: item.qty + 1 }
-                      : item
-                  )
+                //si el item esta en el cart incrementa el contador
+                    item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item)
+                    // si no crea un nuevo array en cart,    // agrega los datos que ya estan, para no sobreescribir
+                    // o perder data,
+                    // y agrega el contador y le da el valor de uno
                 : [...state.cart, { ...item, qty: 1 }],
             };
     case actionTypes.REMOVE_FROM_CART:
             return {
                 ...state,
+                //devuelve todo lo que no coincida con el id especificado
                 cart: state.cart.filter((item) => item.id !== action.payload.id),
               };
     case actionTypes.ADJUST_ITEM_QTY:
