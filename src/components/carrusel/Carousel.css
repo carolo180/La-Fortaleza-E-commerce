@@ -1,6 +1,6 @@
 .carru{
-    margin-top: 170px;
-    position: absolute;
+    margin-top: 50px;
+  
     z-index: -1;
     height: 40vw;
  }
@@ -108,7 +108,6 @@
     }
     .carru{
         z-index: 0;
-        position: relative;
         margin-top: 150px;
         height: 40vw;
      }
@@ -169,7 +168,6 @@
     }
     .carru{
         z-index: 0;
-        position: relative;
         margin-top: 150px;
         height: 35vw;
      }
@@ -221,7 +219,6 @@
         }
         .carru{
             z-index: 0;
-            position: relative;
             margin-top: 150px;
             height: 30vw;
          }

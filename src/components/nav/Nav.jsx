@@ -1,50 +1,36 @@
 import React from 'react'
 import {Link} from 'react-scroll';
-import { Link as LinkRoute } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FaCartPlus } from "react-icons/fa";
-import {FaRegUserCircle} from "react-icons/fa"
-import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 
 const Nav = ({ open, cart }) => {
 
- 
-const [cartCount, setCartCount] = useState(0)
-
-useEffect(()=>{
-
-   let count = 0;
-   cart.forEach((item) => {
-     count += item.qty;
-   });
-
-   setCartCount(count);
-},[cart, cartCount])
-  
-
  const NavWrapper = styled.nav`
   display: flex;
   flex-direction: column;
    align-items: center;
   background-color:#0a001b;
-  position: fixed;
+  position: absolute;
   top: 120px;
+  display: ${props => (props.open ? "contain" : "none")};
   right: ${props => (props.open ? "0" : "-100%")};
    width: 100%;
   height: 50vh;
   transition: right 1s linear;
   padding-top:5vh;
   font-family: 'Poppins', sans-serif;
+  z-index:999;
 
   ul{
     display: flex;
     flex-direction:column;
     justify-content: space-between;
     width: 100%;
-    height:20vh;
+    height:40vh;
     align-items: center;
     font-weight:bold;
     color:white;
@@ -54,6 +40,15 @@ useEffect(()=>{
     color:white;
     text-decoration:none;
   }
+  .itemsmenu{
+    width:50%;
+    height:40vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    alig-items:center;
+    text-align:center;
+    }
  
   @media only screen and (min-width: 624px) {
     display:flex;
@@ -80,7 +75,10 @@ useEffect(()=>{
     .itemsmenu{
       width:50%;
       display:flex;
+      flex-direction:row;
       justify-content: space-around;
+      height:3.2rem;
+      align-items: center;
       }
     .itemmenu{
       font-size:1.1rem;
@@ -102,19 +100,6 @@ useEffect(()=>{
     
        }
 
-
-.borderIcon{
-    background-color: #97D711;
-    border-radius: 100px;
-    width: 12vw;
-    height: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
- 
-}
-
 .navIcon{
   font-size: 1.5rem;
 }
@@ -129,38 +114,43 @@ useEffect(()=>{
     color: #ffffff;
  }
 `
-  const handleClickItem = ()  =>{
-    <NavWrapper open={!open} />
-   
-  }
-  
+//estado que inicializa el contador de referencia del carrito en el nav
+const [cartCount, setCartCount] = useState(0)
+
+//setea los valores que se van agregando al carrito
+useEffect(()=>{
+   let count = 0;
+   //recorre todo el array del carrito, busca el valor del contador(qty) de cada item
+   //y lo suma a la variable count
+   cart.forEach((item) => {
+     count += item.qty;
+   });
+   //setea el valor de count en la constante carCount que es la que se mostrara en el nav
+   setCartCount(count);
+},[cart, cartCount])
+
 ;
   return (
     <NavWrapper open={open}>
         <ul>
           <li className='itemsmenu'>
-        <LinkRoute to={"/"}><span className='itemmenu'>Home</span></LinkRoute>
+        <NavLink  to={"/"}><span className='itemmenu'>Home</span></NavLink >
           <Link to={`container-carousel`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Products</span></Link>
-          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu' onClick={e => { e.preventDefault(); handleClickItem(); }}>Contact</span></Link>
+          <Link to={`Ubication`} smooth={true} offset={-70} duration={500}><span className='itemmenu'>Contact</span></Link>
           </li>
           <li>
-          <LinkRoute to={"/carrito"}>
+          <NavLink to={"/carrito"}>
             <div className='borderIcon'>
-             
-              {cartCount} Products
-              <FaCartPlus  className='navIcon' />
-              
-           </div>
-           </LinkRoute> 
+               {cartCount} Products
+           <FaCartPlus  className='navIcon' />
+            </div>
+           </NavLink > 
            </li>
         </ul>
-       
-       
-      
-
     </NavWrapper>
   )
 }
+//funcion que trae los datos del estado del carrito(cart) desde el shopping reducer
 const mapStateToProps = (state) =>{
   return{
     cart:state.shop.cart

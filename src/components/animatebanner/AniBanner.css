@@ -6,7 +6,7 @@
     align-items: center;   
     margin-top: 22%;
     overflow: hidden;
-    margin-top: 12.5rem;
+    margin-top: -6rem;
     position: absolute;
 }
 .animation{
@@ -39,6 +39,7 @@
         height: 60px;
         display: flex;
         align-items: center;   
+        margin-top: 1rem;
        
     }
     .animation{

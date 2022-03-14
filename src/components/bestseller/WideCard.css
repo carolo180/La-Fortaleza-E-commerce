@@ -41,9 +41,17 @@
     }
 .watchit{
     background-color: #97D711;
-    height: 75px;
-    width: 100px;
+    height: 5vh;
+    width: 16vh;
     border-radius: 5px;
+    color: #0a001be7;
+    font-weight: bold;
+}
+.watchit:hover{
+  background-color: #ffffff;
+  border: 2px solid #97D711;
+  transition-property:initial;   
+  transition-duration: 0.8s;
 }
 .allproducts{
     background-color: #0a001be7;
