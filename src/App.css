@@ -55,7 +55,7 @@
  .sendboton{
      background-color: #97D711;
      height: 5vh;
-     width: 70%;
+     width: 25vh;
      font-weight: bold;
      margin-top: 2%;
  }
@@ -72,7 +72,7 @@
      align-items: center;
  }
  .qtyinput{
-     width: 80%;
+     width: 100%;
    }
  .endspace{
      width: 50%;
@@ -93,6 +93,9 @@
     color: aliceblue;
     animation: trash 1s infinite;
    
+}
+input::-webkit-inner-spin-button {
+    opacity: 1;
 }
 @keyframes trash{
     0%  {transform: rotate(0deg);}
@@ -275,7 +278,7 @@
     .borderIcon{
         background-color: #97D711;
         border-radius: 100px;
-        width: 30vw;
+        width: 40vw;
         height: 8vw;
         display: flex;
         justify-content: space-around;

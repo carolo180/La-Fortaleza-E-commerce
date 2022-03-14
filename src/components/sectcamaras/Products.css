@@ -88,7 +88,7 @@ picture{
  
 #botonprod{
     background-color: #382350;
-    height: 30px;
+    height: 1.5rem;
     width: 100%;
     border-radius: 5px;
     color: aliceblue;
@@ -104,8 +104,8 @@ picture{
 }
 .secondboton{
   background-color: #ffffff;
-  height: 30px;
-  width: 70%;
+  height: 1.5rem;
+  width: 54%;
   border-radius: 5px;
   color: #97D711;
   font-size: 1rem;
@@ -131,10 +131,8 @@ picture{
 .outside{
   background-color: rgba(0, 0, 0, 0.466);
   width: 100vw;
-  position: fixed;
   height: 170vh;
- 
-}
+ }
 .imoda{
   width: 30vh;
   height: 30vh;
@@ -181,11 +179,10 @@ picture{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+ }
 .addtocar{
   background-color:#97D711;
-  height: 8vh;
-  width: 13vh;
+  
   font-size: 1.2rem;
   border-radius: 5px;
 }
@@ -198,8 +195,6 @@ picture{
 }
 .goescart{
   background-color: #382350;
-  height: 8vh;
-  width: 13vh;
   font-size: 1.2rem;
   border-radius: 5px;
   color: #e2dfdf;
@@ -211,6 +206,9 @@ picture{
   color: #ffffff;
   transition-property:initial;   
   transition-duration: 0.8s;
+ }
+ .modal-footer{
+    display: flex;
  }
 #descri{
   display: flex;
@@ -311,7 +309,12 @@ picture{
 }
 
 @media (min-width: 1024px){
- 
+  .outside{
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 100vw;
+    height: 170vh;
+    position: fixed;
+   }
   .buscador{
     width: 18%;
     height: 5vh;
