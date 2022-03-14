@@ -17,6 +17,7 @@ const Form = ({cart, Price}) => {
   const [totalPrices, setTotalPrices] = useState(0);
   const [values, setValues] = useState("");
 
+    
 
   const handleInputChange = e =>{
     const {name, value} = e.target;
@@ -32,26 +33,19 @@ const Form = ({cart, Price}) => {
      let phones = values.phone
      let message = values.msn
      
-     let nameproduct = ""
-       
-     cart.forEach((dat) => {
-        nameproduct += dat.name;
-    
-   //    array3 = nameproduct.concat(qtys[0]);
      
-    
-}) 
+     let mapeo = cart.map((dat) => {
+      let producto=""
+      return( producto = "%0a" + " * " +(dat.qty)+" "+ " Units of " +(dat.name)+", "+ " with a single subtotal price of " + "$"+(dat.precio*dat.qty).toFixed(3))
+     }) 
+  
      var url = "https://wa.me/573044531854?text="+
-     "Hi i am " + named + ","+ 
-     " my email is " + mails + ","
-     + " my contact number is " + phones+ ","
-     + " mi email is " + message + "." + 
-      "Estoy interesado en los siguientes productos" + nameproduct +
-      ","+"con un precio total de " + totalPrices.toFixed(3) +"."
-   
-    
- 
-    
+     "Hi i am " + named + ","+ "%0a"
+     + " My email is " + mails + ","+" %0a"
+     + " My contact number is " + phones + ","+"%0a"
+     + "I would like to order the next products:"+ mapeo+  "%0a"  + "With a total purchase of: " + totalPrices.toFixed(3) +"."+ "%0a" 
+     + message + "."
+     
      window.open(url, '_blank').focus();
   };
 
