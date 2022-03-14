@@ -36,6 +36,7 @@ function App({current}) {
            
           </Routes>
        
+          {location.pathname === "/" && <Footer />}
         </ScrollToTop>
    
      <ToastContainer autoClose={1000} />
