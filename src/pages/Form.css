@@ -1,11 +1,144 @@
+.form{
+    margin-top: 5rem;
+    display: flex;
+    padding-top: 4rem;
+    flex-direction: column;
+}
+.carroinfo{
+    color: #382350;
+}
+.badge{
+      background-color: #382350;
+}
+#formu_contacto, .feedback{
+    max-width: 100%;
+    width: 100%;
+    font-size: 12px;
+    color: gray;
+    margin-top: 2px;
+    margin-bottom: -10px;
+    }
+.iconwhats{
+    color: #97d711e8;
+    font-size: 2rem;
+}    
+.titleform{
+    text-align: center;
+    font-size: 2rem;
+}
+
+:focus{outline: none;}
+
+/* necessary to give position: relative to parent. */
+input[type="text"]{
+     color: #333;
+    width: 100%; 
+     box-sizing: border-box;
+    }
+
+
+.col-3{
+    float: left;
+    width: 44%;
+    margin: 40px 3%;
+    position: relative;
+    } /* necessary to give position: relative to parent. */
+
+input[type="text"]{
+      color: #333; 
+     width: 100%; 
+     box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+
+.effect-16{
+    border: 0px; 
+    padding: 10px 5px;
+    border-bottom: 3px solid #ccc;
+    background-color: transparent;
+    }
+
+.effect-16 ~ .focus-border{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #7f3985;
+    transition: 0.4s;
+    }
+
+.effect-16:focus ~ .focus-border,.has-content.effect-16 ~ .focus-border{
+        width: 100%;
+        transition: 0.4s;
+        }
+
+.effect-16 ~ label{
+    position: absolute;
+    left: 25px;
+    width: 100%;
+    top: 10px;
+    color: rgb(250, 242, 242);
+    transition: 0.3s;
+    z-index: -3;
+    letter-spacing: 0.5px;
+    }
+
+.effect-16:focus ~ label, .has-content.effect-16 ~ label{
+    top: -16px;
+    font-size: 15px;
+    color: #00534A; 
+    transition: 0.3s;
+    }
+
+
+ .feedback{
+    max-width: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    font-size: 12px;
+    color: gray;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    }
+#boton_enviar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+#boton_enviar button{
+    width: 180px;
+    height: 39px; 
+    color:white;
+    max-width: 250px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: #382350;
+    cursor: pointer;
+    border-color:#97d711e8;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+#boton_enviar button:hover{
+    width: 190px;
+    height: 42px;
+    font-size: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 @media only screen and (min-width: 630px) {
     .form{
         margin-top: 10rem;
         display: flex;
         padding-top: 4rem;
+        flex-direction: row;
     }
     .carroinfo{
-        color: blue;
+        color: #382350;
+    }
+    .badge{
+          background-color: #382350;
     }
     #formu_contacto, .feedback{
         max-width: 100%;

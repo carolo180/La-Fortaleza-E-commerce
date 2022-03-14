@@ -2,6 +2,8 @@ import * as actionTypes from "./shopping-types";
 
 export const addToCart = (itemID) => {
   return {
+    //recibe los types desde shopping types y las propiedades
+    // que se utilizaran en cada funcion
     type: actionTypes.ADD_TO_CART,
     payload: {
       id: itemID,

@@ -34,9 +34,9 @@ const SingleItem = ({  currentItem, addToCart }) => {
                 
               <div id="descri">
                 <p className="parradescrip">{currentItem.description}</p>
-                <p className="costo">$ { currentItem.precio.toFixed(3)}</p>
+                <p className="costo">$ {currentItem.precio.toFixed(3)}</p>
                 <div class="modal-footer">
-                    <button className="addtocar" onClick={()=>{addToCart( currentItem.id);  addCartNotification2()}}>Add To Cart <FaCartPlus/></button>
+                    <button className="addtocar" onClick={()=>{addToCart(currentItem.id);  addCartNotification2()}}>Add To Cart <FaCartPlus/></button>
                    
                     <NavLink to={"/carrito"}>
                     <button type="button" class="goescart">Go To Cart <IoMdArrowDropright className="icongoes"/></button>
