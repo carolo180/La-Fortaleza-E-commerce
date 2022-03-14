@@ -1,8 +1,7 @@
 .tiendabody{
-    margin-top: -30px;
+    margin-top: 160px;
 }
  #sectcamara{
-    margin-top:300px;
     position: absolute;
   }
   .buttonFilters{
@@ -13,6 +12,9 @@
     margin-left: 5px;
     border: 2px solid rgb(52, 0, 121);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  .btn-outline-dark:hover{
+    background-color: #382350;
   }
 .filterCamps{
   display: flex;
@@ -25,13 +27,19 @@
   border: 2px solid #10062756;
   color: rgb(52, 0, 121);
   background-color: #c7c7c92f;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-bottom: 3%;
 }
 .buscador::placeholder {
-  color: rgb(52, 0, 121);
+  color: rgba(52, 0, 121, 0.404);
   font-size: 1rem;
-}
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  font-size: 1rem;
+ }
+ .buscador:focus {
+   outline: 2px solid #11E7B3;
+   }
 .categories{
   width: 80%;
   height:5vh;
@@ -79,9 +87,9 @@ picture{
  }
  
 #botonprod{
-    background-color: #0a001be7;
+    background-color: #382350;
     height: 30px;
-    width: 100px;
+    width: 100%;
     border-radius: 5px;
     color: aliceblue;
     font-size: 1rem;
@@ -97,7 +105,7 @@ picture{
 .secondboton{
   background-color: #ffffff;
   height: 30px;
-  width: 100px;
+  width: 70%;
   border-radius: 5px;
   color: #97D711;
   font-size: 1rem;
@@ -115,12 +123,19 @@ picture{
 .botones{
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 /*MODAL*/
-
-#imoda{
+.outside{
+  background-color: rgba(0, 0, 0, 0.466);
+  width: 100vw;
+  position: fixed;
+  height: 170vh;
+ 
+}
+.imoda{
   width: 30vh;
   height: 30vh;
 }
@@ -141,7 +156,17 @@ picture{
   width: 100%;
   font-size: 1.5rem;
   color: white;
-  background-color: #0a001be7;
+  background-color: #0a001bc5;
+}
+.modal-title2{
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #0a001bc5;
+  background-color: #dbd9ddcc;
+}
+.costo{
+  font-size: 1.7rem;
 }
 .modal-body{
     display: flex;
@@ -159,8 +184,8 @@ picture{
 }
 .addtocar{
   background-color:#97D711;
-  height: 6vh;
-  width: 20vh;
+  height: 8vh;
+  width: 13vh;
   font-size: 1.2rem;
   border-radius: 5px;
 }
@@ -168,7 +193,25 @@ picture{
   background-color: #0a001be7;
   border: 2px solid #97D711;
   color: #ffffff;
+  transition-property:initial;   
+  transition-duration: 0.8s;
 }
+.goescart{
+  background-color: #382350;
+  height: 8vh;
+  width: 13vh;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #e2dfdf;
+  text-align: center;
+}
+.goescart:hover{
+  background-color: #0a001be7;
+  border: 2px solid #97D711;
+  color: #ffffff;
+  transition-property:initial;   
+  transition-duration: 0.8s;
+ }
 #descri{
   display: flex;
   flex-direction: column;
@@ -178,6 +221,9 @@ picture{
 .titleprod{
   font-size: 2rem;
   color: #0a001be7;
+}
+.icongoes{
+  font-size: 2rem;
 }
 
 .guaranteIcon{
@@ -219,7 +265,7 @@ picture{
 /*MODAL*/
 @media (min-width: 765px){
   #sectcamara{
-    margin-top:300px;
+    margin-top:100px;
   }
   .filterCamps{
     margin-bottom: 0%;  
@@ -233,7 +279,7 @@ picture{
     width: 30%;
     height:4vh;
   }
-  #imoda{
+  .imoda{
     width: 30vh;
     height: 30vh;
   }
@@ -245,6 +291,23 @@ picture{
   .iconsmodal{
     width: 100%;
   }
+  #botonprod{
+    height: 30px;
+    width: 6rem;
+   margin-bottom: 5px;
+}
+
+.secondboton{
+  background-color: #ffffff;
+  height: 30px;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botones{
+ width: 90%;
+}
 }
 
 @media (min-width: 1024px){
@@ -258,13 +321,13 @@ picture{
     width: 20%;
     height:5vh;
   }
-  #imoda{
+  .imoda{
     width: 50vh;
     height: 50vh;
   }
   .modal-dialog{
     max-width: 80vw;
-    min-height: 90vh;
+    max-height: 30vh;
   }
   .modal-content{
     min-height: 90vh;
@@ -276,6 +339,12 @@ picture{
     font-size: 1.2rem;
     padding: 3%;
   }
+  .modal-footer{
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+
+  }
   #descri{
     display: flex;
     flex-direction: column;
@@ -285,9 +354,14 @@ picture{
   }
   .addtocar{
      height: 6vh;
-    width: 23vh;
+    width: 22vh;
     font-size: 1.2rem;
  }
+ .goescart{
+  height: 6vh;
+  width: 22vh;
+  font-size: 1.2rem;
+}
   .iconsmodal{
     width: 100%;
     height: 13vh;

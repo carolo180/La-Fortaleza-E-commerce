@@ -4,9 +4,9 @@ import styled from "styled-components";
 const MenuButtonWrapper = styled.button`
   border: none;
   padding-left:10px;
-  margin-top: 1.3rem;
+  margin-top: 2rem;
   position:absolute;
-  z-index:1;
+  z-index:1000;
   background-color:transparent;
   width:100vw;
   display:flex;
@@ -32,7 +32,7 @@ function MenuButton({ open, handleClick }) {
       <svg
         className="svg-icon"
         width="30"
-        height="30"
+        height="50"
         viewBox="0 0 20 20"
         fill="#fff"
       >
