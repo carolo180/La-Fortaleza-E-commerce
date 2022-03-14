@@ -4,10 +4,10 @@ import styled from "styled-components";
 const MenuButtonWrapper = styled.button`
   border: none;
   padding-left:10px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position:absolute;
   z-index:1000;
-  background-color:transparent;
+  background-color: #8f8e8e1e;
   width:100vw;
   display:flex;
   justify-content:flex-start;

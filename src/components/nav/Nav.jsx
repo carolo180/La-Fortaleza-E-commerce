@@ -96,9 +96,7 @@ const Nav = ({ open, cart }) => {
         transition-property:initial;   
         transition-duration: 0.5s;
       }
-     
-    
-       }
+     }
 
 .navIcon{
   font-size: 1.5rem;
@@ -106,7 +104,6 @@ const Nav = ({ open, cart }) => {
 .borderIcon:hover{
     background-color: #11E7B3;
     width: 14vw;
-  
     transition-property:initial;   
     transition-duration: 0.5s;
  }

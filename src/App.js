@@ -24,7 +24,7 @@ function App({current}) {
     <div className="App">
         <ScrollToTop>
 
-        {location.pathname !== "/formulario" && location.pathname !== "/carrito"  && <Header />}
+        {location.pathname !== "/formulario" && location.pathname !== "/carrito" && location.pathname !== "/product"  && <Header />}
 
           <Routes>
             <Route path="/" element={<Home/>} />
